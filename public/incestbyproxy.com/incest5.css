@@ -1,0 +1,71 @@
+/* CSS Document */
+
+*
+	{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	}
+TABLE
+	{
+	}
+TD
+	{
+	vertical-align:top;
+	width:auto;
+	height:auto;
+	position: relative;
+	}
+BODY
+{
+background-color:#333333
+}
+IMG
+	{
+	border:0;
+	}
+.main
+	{
+	position: relative;
+	width:750px;
+	margin-left: auto;
+	margin-right:auto;
+	background-color:#000;
+	height:auto;
+	background-image:url(images/Logo2vertical0x111.gif);
+	}
+IFRAME.iframe1
+	{
+	position: absolute;
+	right: 0;
+	height: 100%;
+	}
+DIV.formlabel
+	{
+	color:#aaa;
+	margin-top: 10px;
+	
+	width: 60px;
+	
+
+	}
+DIV.forminput
+	{
+	position:relative;
+	width:auto;
+	
+	border: 0;
+	margin: 10px;
+	}
+INPUT
+	{
+	color:#CCCCCC;
+	border: 1px dotted #aaa;
+	background-color:transparent;
+	}
+TEXTAREA
+	{
+	color:#CCCCCC;
+	border: 1px dotted #aaa;
+	background-color:transparent;
+	margin-bottom: 20px;
+	overflow:auto;
+	}

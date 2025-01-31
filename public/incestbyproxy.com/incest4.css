@@ -1,0 +1,37 @@
+/* CSS Document */
+
+*
+	{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	}
+BODY
+{
+background-color:#222222;
+}
+
+IMG
+	{
+	border:0;
+	}
+.main
+	{
+	position: relative;
+	width:750px;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top:10%;
+	margin-bottom:10%;
+	background-color:#000;
+	height:auto;
+	}
+IFRAME.iframe1
+	{
+	position: absolute;
+	right: 0;
+	height: 100%;
+	}
+IMG.sideimage
+	{
+	
+	
+	}

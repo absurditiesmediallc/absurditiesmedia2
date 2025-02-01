@@ -42,3 +42,10 @@ background-image: radial-gradient(circle at center center, transparent 0%,rgba(2
 /*.splide__pagination {
   visibility: hidden;
 }*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  background-color: #00ff00; /* 2 */
+}

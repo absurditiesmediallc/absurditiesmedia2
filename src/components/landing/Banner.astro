@@ -1,3 +1,6 @@
+---
+const { bannerText = "Drugs ✺ You love it ✺ Sex ✺ You need it ✺ Shoplifting ✺ You can't live without it ✺ Heroin ✺ Sick without it ✺ Absurdities Media ✺ Submit" } = Astro.props;
+---
  <section class="border-white/20  border-y">
         <div class="text-white mx-auto">
           <div class="mx-auto overflow-hidden overflow-x-hidden py-2 relative">
@@ -9,17 +12,8 @@
                 class="absolute from-black inset-0 left-0 via-transparent w-44 z-10 bg-gradient-to-l ml-auto">
               </div>
             </div>
-            <div
-              class="flex items-center animate-marquee font-black font-display gap-4 relative tracking-widest uppercase whitespace-nowrap">
-              Drugs <span class="hidden lg:inline">✺</span>You love it <span
-                class="hidden lg:inline">✺</span
-              > Sex <span class="hidden lg:inline">✺</span> You need it <span
-                class="hidden lg:inline">✺</span
-              >Shoplifting <span class="hidden lg:inline">✺</span> You can't live without it <span
-                class="hidden lg:inline">✺</span
-              > Heroin <span class="hidden lg:inline">✺</span>Sick without it<span
-                class="hidden lg:inline">✺</span
-              > Absurdities Media <span class="hidden lg:inline">✺</span> Submit
+            <div class="flex items-center animate-marquee font-black font-display gap-4 relative tracking-widest uppercase whitespace-nowrap">
+            {bannerText}
             </div>
           </div>
         </div>

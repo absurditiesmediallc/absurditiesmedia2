@@ -1,0 +1,45 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/landing/Hero.astro";
+import Work from "@/components/landing/Work.astro";
+import Intro from "@/components/landing/Intro.astro";
+import Services from "@/components/landing/Services.astro";
+import Cta from "@/components/landing/Cta.astro";
+import linksHeroImage from '../assets/dopecollageMED.jpg';
+import Banner from '@/components/landing/Banner.astro';
+import GradientGrid from '@/components/landing/GradientGrid.astro';
+import Link from '@/components/global/Link.astro'; 
+---
+
+
+<BaseLayout>
+  <Hero heroText="ABSURDITIESMEDIA - LINKS"  heroImage={linksHeroImage} heroImageAlt="I don't do drugs, I am drugs - salvador dali" />
+<!--  <Work /> -->
+  <Intro />
+  <Banner bannerText="Drugs ✺ You love it ✺ Sex ✺ You need it ✺ Shoplifting ✺ You can't live without it ✺ Heroin ✺ Sick without it ✺ Your Job ✺ Killing You Slowly ✺ Will Discard You With Insufficient Notice "/>
+  <GradientGrid>
+  <h2 class="text-white font-display uppercase lg:text-3xl pb-8">Recording Artists</h2>
+  <div class="text-white font-display uppercase underline lg:text-2xl">
+  <div class="grid grid-flow-col grid-rows-1">
+  <div class="class="col-span-2">
+  <Link title="Packet Sniffer | SoundCloud" href="https://soundcloud.com/packet_sniffer">Packet Sniffer</Link>
+  <Link title="Dmmagaden | SoundCloud"  href="https://soundcloud.com/dmmagaden">Dmmagaden</Link>
+  </div>
+  <div class="col-span-2">
+  <Link title="Incest by Proxy | SoundCloud"  href="https://soundcloud.com/incestbyproxy">Incest by Proxy</Link>
+  <Link title="Ke-Vin | SoundCloud"  href="https://soundcloud.com/choc_t">Ke-Vin</Link>
+  </div>
+  <div class="col-span-2">
+  <Link title="Mariner | SoundCloud"  href="https://soundcloud.com/mariner197x">Mariner</Link>
+  <Link title="IT Support Team | SoundCloud"  href="https://soundcloud.com/it_support_team">IT Support Team<Link>
+  </div>
+  <div class="col-span-2">
+  <Link title="Whadayacalit | SoundCloud"  href="https://soundcloud.com/whadayacalit">Whadayacalit</Link>
+  <Link title="Jesus Christfvck | SoundCloud"  href="https://soundcloud.com/junkyjesus">Jesus Christfvck</Link>
+  </div>
+  </div>
+</div>
+  </GradientGrid>
+  <Services />
+  <Cta />
+</BaseLayout>

@@ -24,9 +24,9 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout data={post.data}>
-	<SolidGrid bgcolor="bg-slate-900">
+<SolidGrid bgcolor="bg-zinc-800">
     <BlogPost {...post.data} data={post.data}>
-	<Content />
-</BlogPost>
+	    <Content />
+    </BlogPost>
 </SolidGrid>
 </BaseLayout>

@@ -5,12 +5,18 @@ import Work from "@/components/landing/Work.astro";
 import Intro from "@/components/landing/Intro.astro";
 import Services from "@/components/landing/Services.astro";
 import Cta from "@/components/landing/Cta.astro";
-
+import RecordingArtists from '@/components/landing/RecordingArtists.astro'
+import SolidGrid from '@/components/landing/SolidGrid.astro'
 ---
 
 
+
 <BaseLayout>
-  <Hero heroText="Building the the content you deserve to see with no regard for what you want. You will love it." />
+
+  <Hero heroText="Building the the content you deserve to see with no regard for what you want. You will love it." />  
+  
+  <SolidGrid bgcolor="bg-emerald-900"><RecordingArtists/></SolidGrid>
+<SolidGrid bgcolor="bg-slate-900 text-sky-500"><center>💓💓💓 🧿 we're 🔥 watching 🔥 you 🪬 and 🔮 we 🧿 can 💓 see 🪬 you're 🔥 on 🔥 drugs 💉 💓💓💓</center></SolidGrid>
   <Work /> 
   <Intro />
   <Services />

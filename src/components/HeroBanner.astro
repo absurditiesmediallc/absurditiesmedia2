@@ -1,0 +1,12 @@
+---
+// src/components/HeroBanner.astro
+const { title, description, ctaText="Expore Posts", ctaLink="/blog/" } = Astro.props;
+---
+
+<section class="bg-theme-bg text-theme-text py-12 text-center border-b border-theme-secondary">
+  <h2 class="text-white font-display uppercase text-3xl lg:text-6xl">{title}</h2>
+  <p class="text-slate-200 font-display uppercase text-1xl lg:text-3xl">{description}</p>
+  <!--<button class="px-4 py-2 rounded font-semibold bg-blue-900 text-white">
+    <a href={ctaLink}>{ctaText}</a>
+  </button>-->
+</section>

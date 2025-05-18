@@ -1,0 +1,12 @@
+---
+import { SOCIAL_MEDIA } from '../consts';
+import SocialLink from './SocialLink.astro';
+---
+<div class="social-links flex flex-grid">
+{
+  SOCIAL_MEDIA.map((account) => (
+    <SocialLink {...account}/>
+  ))
+}
+</div>
+	

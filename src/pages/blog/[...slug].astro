@@ -1,0 +1,32 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogPost from '../../layouts/BlogPost.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, SITE_KEYWORDS, SITE_SUBJECT, COMPANY_NAME, ADMIN_EMAIL, SITE_LANGUAGE } from '../../consts';
+import GradientGrid from '@/components/landing/GradientGrid.astro';
+import SolidGrid from '@/components/landing/SolidGrid.astro';
+
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: post,
+	}));
+}
+
+type Props = CollectionEntry<'blog'>;
+
+const post = Astro.props;
+
+const { Content } = await render(post);
+---
+
+<BaseLayout data={post.data}>
+	<SolidGrid bgcolor="bg-slate-900">
+    <BlogPost {...post.data} data={post.data}>
+	<Content />
+</BlogPost>
+</SolidGrid>
+</BaseLayout>

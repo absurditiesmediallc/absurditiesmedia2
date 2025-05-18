@@ -1,17 +1,67 @@
 ---
 import "../styles/global.css";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, SITE_KEYWORDS, SITE_SUBJECT, COMPANY_NAME, ADMIN_EMAIL, SITE_LANGUAGE } from '../consts';
+const {title=SITE_TITLE, cover, desc=SITE_DESCRIPTION, url ,pubDate, keywords=SITE_KEYWORDS, heroImage, description=SITE_DESCRIPTION} = Astro.props;
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const image = heroImage;
 ---
 
-
+<!-- Global Metadata -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="author" content="Michael Andreuzza" />
-<meta name="your keywords" content="Add ypour keywords here" />
-<!-- Favicon guidelines generated with https://favicon.io/ -->
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link
+	rel="alternate"
+	type="application/rss+xml"
+	title={SITE_TITLE}
+	href={new URL('rss.xml', Astro.site)}
+/>
+
+<meta name="generator" content={Astro.generator} />
+
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name='language' content={SITE_LANGUAGE} />
+<meta name="description" content={description ? description : SITE_DESCRIPTION} />
+<meta name="subject" content={SITE_SUBJECT} />
+<meta name='robots' content='index,follow' />
+<meta name='copyright' content={COMPANY_NAME} />
+<meta name='author' content={ADMIN_EMAIL} />
+<meta name='reply-to' content={ADMIN_EMAIL} />
+<meta name='keywords' content={(typeof(keywords) == 'object') ? keywords.join(',') : SITE_KEYWORDS.join(',')} />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="url" content={SITE_URL}/>
+<meta name="identifier-url" content={SITE_URL}/>
+<meta name='syndication-source' content={canonicalURL} />
+<meta name='original-source' content={canonicalURL} />
+
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:site_name" content={SITE_TITLE}/>
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+
+
+<!-- start temp favicon code -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
 <link
   rel="apple-touch-icon"
   sizes="180x180"
@@ -33,8 +83,9 @@ import "../styles/global.css";
 <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#ffffff" />
 <meta name="msapplication-TileColor" content="#ffffff" />
 <meta name="theme-color" content="#ffffff" />
+<!-- end temp favicon code -->
+<!-- start existing css/js imports (can be removed?) -->
 
-<!-- HTML in your document's head -->
 <link rel="preconnect" href="https://rsms.me/" />
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 
@@ -50,3 +101,4 @@ import "../styles/global.css";
 ></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
 ></script>
+<!-- end existing css/js imports (can be removed?) -->

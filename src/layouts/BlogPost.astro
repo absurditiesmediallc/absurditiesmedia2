@@ -1,0 +1,30 @@
+t---
+import FormattedDate from '../components/FormattedDate.astro';
+const { data } = Astro.props;
+---
+<article class="">
+	<section class="text-slate-200 post-header">
+	  <div class="box-content p-4 m-4 bg-sky-300" >
+		  {data.heroImage && <img src={data.heroImage} alt=""  class="inline"/>}
+	  </div>
+		<div class="title">
+		<h3 class="sm:text-6xl lg:text-8xl m-2">{data.title}</h3>
+
+			<div class="date sm:text-xl lg:text-2xl m-2 mb-10">
+				<FormattedDate date={data.pubDate} />
+				{
+					data.updatedDate && (
+						<div class="last-updated-on sm:text-lg lg:text-xl ">
+							Last updated on <FormattedDate date={data.updatedDate} />
+						</div>
+					)
+				}
+			</div>
+		</div>
+		</section>
+		<section class="m-2 text-slate-400 post-body sm:text-xl lg:text-2xl ">
+		<div>
+
+		<slot />
+		</section>
+</article>

@@ -49,3 +49,7 @@ button,
 [type='submit'] {
   background-color: #00ff00; /* 2 */
 }
+
+.post-body p {
+  @apply mt-2 mb-6
+}

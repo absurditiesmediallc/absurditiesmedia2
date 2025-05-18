@@ -1,0 +1,35 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from 'astro:content';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, SITE_KEYWORDS, SITE_SUBJECT, COMPANY_NAME, ADMIN_EMAIL, SITE_LANGUAGE, BLOG_DESCRIPTION, BLOG_KEYWORDS} from '../../consts';
+import HeroBanner from "@/components/HeroBanner.astro";
+import BlogPostCard from "@/components/BlogPostCard.astro";
+import PostList from "@/components/PostList.astro";
+import GradientGrid from '@/components/landing/GradientGrid.astro';
+import SolidGrid from '@/components/landing/SolidGrid.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+let data = {
+	'title':SITE_TITLE,
+	'description': BLOG_DESCRIPTION,
+	'keywords': BLOG_KEYWORDS
+}
+const title = "Welcome to Our Blog";
+---
+<BaseLayout data={data}>	
+  <SolidGrid bgcolor="bg-slate-800">
+   <HeroBanner title={title} description={BLOG_DESCRIPTION}/>
+	</SolidGrid>
+  <SolidGrid bgcolor="bg-cyan-700">
+	<PostList> 
+	 {posts.map(item => (
+     <BlogPostCard id={item.id} hero={item.data.heroImage} description={item.data.description} pubdate={item.data.pubDate} title={item.data.title} heroalt={item.data.heroAlt} />
+	 ))}
+  </PostList>
+	</SolidGrid>
+</BaseLayout>
+
+

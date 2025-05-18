@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, SITE_KEYWORDS, SITE_SUBJECT, COMPANY_NAME, ADMIN_EMAIL, SITE_LANGUAGE } from '../consts';
-const {title=SITE_TITLE, cover, desc=SITE_DESCRIPTION, url ,pubDate, keywords=SITE_KEYWORDS, heroImage, description=SITE_DESCRIPTION} = Astro.props;
+const {title=SITE_TITLE, cover, desc=SITE_DESCRIPTION, url=SITE_URL,pubDate, keywords=SITE_KEYWORDS, heroImage, description=SITE_DESCRIPTION} = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const image = heroImage;
@@ -14,8 +14,8 @@ const image = heroImage;
 <link
 	rel="alternate"
 	type="application/rss+xml"
-	title={SITE_TITLE}
-	href={new URL('rss.xml', Astro.site)}
+	title={SITE_TITLE} 
+	href={new URL('/blog/rss.xml', Astro.site)}
 />
 
 <meta name="generator" content={Astro.generator} />

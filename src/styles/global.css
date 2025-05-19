@@ -87,3 +87,39 @@ button,
   display:block;
   transition:.5s;
 }
+
+
+
+.blog-post .post-body h1 { @apply text-7xl; }
+.blog-post .post-body h2 { @apply text-6xl; }
+.blog-post .post-body h3 { @apply text-5xl; }
+.blog-post .post-body h4 { @apply text-4xl; }
+.blog-post .post-body h5 { @apply text-3xl; }
+.blog-post .post-body h6 { @apply text-2xl; }
+.blog-post .post-body h7 { @apply text-xl; }
+.blog-post .post-body h8 { @apply text-lg; }
+.blog-post .post-body h9 { @apply text-base; }
+
+@media (min-width: 768px) {
+.blog-post .post-body h1 { @apply text-8xl; }
+.blog-post .post-body h2 { @apply text-7xl; }
+.blog-post .post-body h3 { @apply text-6xl; }
+.blog-post .post-body h4 { @apply text-5xl; }
+.blog-post .post-body h5 { @apply text-4xl; }
+.blog-post .post-body h6 { @apply text-3xl; }
+.blog-post .post-body h7 { @apply text-2xl; }
+.blog-post .post-body h8 { @apply text-xl; }
+.blog-post .post-body h9 { @apply text-lg; }
+}
+
+@media (min-width: 1024px) {
+  .blog-post .post-body h1 { @apply text-9xl; }
+  .blog-post .post-body h2 { @apply text-8xl; }
+  .blog-post .post-body h3 { @apply text-7xl; }
+  .blog-post .post-body h4 { @apply text-6xl; }
+  .blog-post .post-body h5 { @apply text-5xl; }
+  .blog-post .post-body h6 { @apply text-4xl; }
+  .blog-post .post-body h7 { @apply text-3xl; }
+  .blog-post .post-body h8 { @apply text-2xl; }
+  .blog-post .post-body h9 { @apply text-xl; }
+}

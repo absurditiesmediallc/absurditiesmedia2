@@ -8,8 +8,8 @@
 </TITLE>
 <META NAME = "keyword" Content = "shock rock, disgusting music, rock band, worst band, greatest band, patriotic music, incest by proxy, bad taste, explicit lyrics">
 <LINK rel=StyleSheet href="incest2.css" type="text/css" media=screen>
-<link href="http://www.incestbyproxy.com/incestbyproxyfeed.xml" rel="alternate" type="application/rss+xml" title="rss" />
-<link rel="shortcut icon" href="http://www.incestbyproxy.com/incest.ico">
+<link href="https://absurditiesmedia.com/incestbyproxy.com/incestbyproxyfeed.xml" rel="alternate" type="application/rss+xml" title="rss" />
+<link rel="shortcut icon" href="https://absurditiesmedia.com/incestbyproxy.com/incest.ico">
 </head>
 
 <body>
@@ -54,7 +54,7 @@
 			<a class ="discog_link" href = "index.html">Introduction</a><hr/>
 			<a class ="discog_link" href = "merchandise.html">Merchandise</a><hr/>
 			<a class ="discog_link"href="forum/index.html">Forum</a><hr/>
-			<a id = "currentlink"   class ="discog_link" href = "podcast.php">Podcast</a><a href = "http://www.incestbyproxy.com/incestbyproxyfeed.xml"> <img border = "none" src ="images/xml.png" style = "vertical-align:-30%;"></img></a>
+			<a id = "currentlink"   class ="discog_link" href = "podcast.php">Podcast</a><a href = "https://absurditiesmedia.com/incestbyproxy.com/incestbyproxyfeed.xml"> <img border = "none" src ="images/xml.png" style = "vertical-align:-30%;"></img></a>
 			<hr/>
 
 			<aclass ="discog_link" href = "discog.html">Discography</a><hr/>
@@ -76,7 +76,7 @@
 	</div>
 	</div>
     <div class = "caption" style = "font-size: .5em; width: 750px;">©2005 INCEST BY PROXY
-  	<a href = "http://www.incestbyproxy.com">WWW.INCESTBYPROXY.COM</a><br>
+  	<a href = "https://absurditiesmedia.com/incestbyproxy.com">WWW.INCESTBYPROXY.COM</a><br>
 	WEB DESIGN BY CAPTAIN MAGGOTCUNT</div>
 	</div>
 <script type="text/javascript">

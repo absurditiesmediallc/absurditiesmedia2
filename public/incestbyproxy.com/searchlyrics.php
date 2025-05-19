@@ -17,7 +17,7 @@
     <tr>
       <td colspan="2">
         <div class = centered>
-          <div align="center"><a href = "http://www.incestbyproxy.com"><img  style = "border:none;" src="images/logo2.gif" style = "margin-left: auto; margin-right: auto;"></img></a> </div>
+          <div align="center"><a href = "https://absurditiesmedia.com/incestbyproxy.com"><img  style = "border:none;" src="images/logo2.gif" style = "margin-left: auto; margin-right: auto;"></img></a> </div>
         </div>
         </td>
     </tr>

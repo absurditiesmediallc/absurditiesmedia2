@@ -14,7 +14,7 @@
 
   function loadMovie()
   	{
-	windowref = window.open('http://www.incestbyproxy.com/HarlequinAd1.html','HarlequinMovie','scrollbars=no, toolbar = 0, width = 760, height = 550, left = 25, top = 200');
+	windowref = window.open('https://absurditiesmedia.com/incestbyproxy.com/HarlequinAd1.html','HarlequinMovie','scrollbars=no, toolbar = 0, width = 760, height = 550, left = 25, top = 200');
 	}
   function closeMovie()
   	{

@@ -49,7 +49,7 @@ ini_set("allow_url_fopen", "1");
 // If XLMfile is passed as part of the REQUEST_URI, then it will be used
 // otherwise the the file below is used.
 //$XMLfilename = "http://examlple.com/sample.xml";
-$XMLfilename = "http://www.incestbyproxy.com/incestbyproxyfeed.xml";
+$XMLfilename = "https://absurditiesmedia.com/incestbyproxy.com/incestbyproxyfeed.xml";
 if (isset($_REQUEST["XMLFILE"])) {
   if (stristr($_REQUEST["XMLFILE"], "file://")) {
     // Not allowed

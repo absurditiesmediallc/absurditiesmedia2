@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Favicon from '@/components/global/Favicon.astro'
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL, SITE_KEYWORDS, SITE_SUBJECT, COMPANY_NAME, ADMIN_EMAIL, SITE_LANGUAGE } from '../consts';
 const {title=SITE_TITLE, cover, desc=SITE_DESCRIPTION, url=SITE_URL,pubDate, keywords=SITE_KEYWORDS, heroImage, description=SITE_DESCRIPTION} = Astro.props;
 
@@ -57,10 +58,7 @@ const image = heroImage;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-
-
-<!-- start temp favicon code -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<Favicon/>
 
 <link
   rel="apple-touch-icon"

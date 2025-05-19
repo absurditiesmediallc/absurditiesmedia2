@@ -9,35 +9,6 @@ import SolidGrid from '@/components/landing/SolidGrid.astro'
         href="mailto:contact@absurditiesmedia.com"
         class="text-white text-center items-center w-full bg-carrot duration-200 focus:outline-disc focus:ring-0 font-display font-medium hoder:rounded-0 inline-flex justify-center lg:py-12 lg:text-6xl px-4 py-6 rounded-full text-3xl"
         >Get in Touch</a>
-      <input id="subscribe-event" value="0" type="hidden"/>
-
-      <script>
-        function checkValue(){
-          let subscribeFormElement = document.getElementById('subscribe-event');
-          let currentValue = subscribeFormElement.value;
-          return (currentValue == 1);
-        }
-
-        function waitForSubsribe() { return new Promise((resolve,reject) => {    
-          var intervalId = null;
-          var returnOnceSubscribeClicked = function() {
-            if(checkValue()) {
-              if(intervalId != null) clearInterval(intervalId); 
-              resolve(true);
-            }
-          }
-          intervalId = setInterval(returnOnceSubscribeClicked, 500);
-          });
-        }
-
-        const subscribeButton = document.getElementById("subscribe-link");
-        subscribeButton.addEventListener('click', (e)=>{
-          let subscribeFormElement = document.getElementById('subscribe-event');
-          subscribeFormElement.value = "1";
-          });
-
-      </script>
-      <a id="subscribe-link"  class="text-white text-center items-center w-full bg-carrot duration-200 focus:outline-disc focus:ring-0 font-display font-medium hoder:rounded-0 inline-flex justify-center lg:py-12 lg:text-6xl px-4 py-6 rounded-full text-3xl">SUBSCRIBE</a>
-
+    
     </div>
 </SolidGrid>

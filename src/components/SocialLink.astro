@@ -1,5 +1,9 @@
 ---
 const {url, cssicon, platform} = Astro.props;
 ---
+<li>
+  <a title={platform} class="bg-zinc-950 text-red-400" target="_blank" href={url}>
+    <i class={cssicon} aria-hidden="true"></i>
+  </a>
+</li>
 
-<div class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-300 hover:text-sky"><a target="_blank" href={url}><span class={cssicon}></span>{platform}</a></div>

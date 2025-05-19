@@ -1,9 +1,12 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SOCIAL_MEDIA = [{platform:"X", url:"https://x.com/absurditiesmedia", cssicon:"twitter"},
-  {platform:"Github", url:"https://github.com/absurditiesmedia", cssicon:"github"},
-  {platform:"LinkedIn", url:"https://linkedin.com/in/absurditiesmedia", cssicon:"linkedin"},
+export const SOCIAL_MEDIA = [{platform:"X", url:"https://x.com/absurditesmg", cssicon:"fa-brands fa-x-twitter"},
+  {platform:"Github - Organization Account", url:"https://github.com/absurditiesmediallc", cssicon:"fa-brands fa-github"},
+  {platform:"Github", url:"https://github.com/absurditiesmedia", cssicon:"fa-brands fa-github"},
+  {platform:"LinkedIn", url:"https://www.linkedin.com/in/absurdities-media-group/", cssicon:"fa-brands fa-linkedin"},
+  {platform:"Codepen", url:"https://codepen.io/absurditiesmedia", cssicon:"fa-brands fa-codepen"},
+  {platform:"Website", url:"https://absurditiesmedia", cssicon:"fas fa-bookmark"}
   //{platform:"---", url:"http://example.com", cssicon:"web"},
   //{platform:"---", url:"http://example.com", cssicon:"web"},
 ];

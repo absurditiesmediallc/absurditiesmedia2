@@ -384,6 +384,22 @@ TABLE.paperbackground TR:nth-child(2) TD TABLE TR TD {height: unset !important; 
 
 DIV.footer-text
 {
-color: #ddd; font-family: verdana;
+color: #ddd; font-family: "Impact"  sans-serif;
 font-size:.8em;
 }
+DIV.footer-text strike {
+	font-size:.8em; 
+	color:#888;
+}
+DIV.footer-text .absurdities-box {
+	margin:20px 0 50px;
+	font-size:2.5em;
+}
+DIV.footer-text a.absuridities-link {
+	font-size:.8em;
+	background: #000088;
+	padding:5px;
+	color: #00ff00;
+	margin:5px;
+}
+

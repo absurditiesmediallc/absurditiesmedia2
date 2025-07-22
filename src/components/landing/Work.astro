@@ -1,18 +1,17 @@
 <section class="border-b border-white/20 ">
-  <div class="mx-auto max-w-7xl border-x border-white/20  px-8 py-12  bg-violet-950">
-    <div class="mx-auto">
-      <h3 class="text-3xl font-display text-white uppercase">
+  <div class="border-x bg-violet-950 border-white/20 mx-auto ">
+    <div class="mx-auto  p-2 lg:px-8 lg:py-4">
+      <h3 class=" font-display text-white uppercase lg:text-3xl">
         Under Development by Absurdities Media LLC
       </h3>
     </div>
   </div>
 </section>
-<section class="border-b border-white/20  bg-accent-500">
+<section class="border-b border-white/20 bg-accent-500">
   <div
-    class="mx-auto max-w-7xl border-white/20  border-x"
+    class="mx-auto border-white/20 border-x lg:max-w-7xl"
     x-data="{ init() {
             new Splide(this.$refs.splide, {
-
                 perPage: 5,
                 gap: '0rem',
                 breakpoints: {
@@ -77,19 +76,40 @@
           id="splide01-list"
           role="presentation"
           style="transform: translateX(-2040px);">
+  <li
+            class="flex justify-center flex-col splide__slide is-prev"
+            id="splide01-slide03"
+            role="tabpanel"
+            aria-roledescription="slide"
+            aria-label="absurditiesmedia.com"
+            style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
+            aria-hidden="true">
+            <a href="https://absurditiesmedia.com" target="_blank">
+            <img
+              alt="work"
+              class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
+              src="/work/14.webp"
+            />
+            <div
+              class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white/20 ">
+              <span class="block font-semibold">absurditiesmedia.com</span>
+            </div>
+          </a>
+          </li>
+
           <li
             class="flex justify-center flex-col splide__slide is-prev"
             id="splide01-slide03"
             role="tabpanel"
             aria-roledescription="slide"
-            aria-label="1 of 8"
+            aria-label="sorcery.site"
             style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
             aria-hidden="true">
             <a href="https://sorcery.site" target="_blank">
             <img
               alt="work"
               class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
-              src="/work/1.png?2"
+              src="/work/1.webp"
             />
             <div
               class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white/20 ">
@@ -110,7 +130,7 @@
             <img
               alt="work"
               class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
-              src="/work/12.png"
+              src="/work/12.webp"
             />
             <div
               class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white/20 ">
@@ -119,34 +139,13 @@
           </a>
           </li>
 
-          <li
-            class="flex justify-center flex-col splide__slide"
-            id="splide01-slide02"
-            role="tabpanel"
-            aria-roledescription="slide"
-            aria-label="3 of 8"
-            style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
-            aria-hidden="true">
-            <a href="https://ak.pics" target="_blank">
-
-            <img
-              alt="work"
-              class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
-              src="/work/13.png"
-            />
-            <div
-              class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white/20 ">
-              <span class="block font-semibold">ak.pics - infinitescroll</span>
-            </div>
-          </a>
-          </li>
 
           <li
             class="flex justify-center flex-col splide__slide"
             id="splide01-slide02"
             role="tabpanel"
             aria-roledescription="slide"
-            aria-label="4 of 8"
+            aria-label="newliteracy.online"
             style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
             aria-hidden="true">
             <a href="https://newliteracy.online" target="_blank">
@@ -154,7 +153,7 @@
             <img
               alt="work"
               class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
-              src="/work/2.png"
+              src="/work/2.webp"
             />
             <div
               class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white/20 ">
@@ -162,39 +161,42 @@
             </div>
           </a>
           </li>
+
           <li
-            class="flex justify-center flex-col splide__slide is-prev"
-            id="splide01-slide03"
+            class="flex justify-center flex-col splide__slide"
+            id="splide01-slide02"
             role="tabpanel"
             aria-roledescription="slide"
-            aria-label="5 of 8"
+            aria-label="ak.pics"
             style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
             aria-hidden="true">
-            <a href="https://absurditiesmedia.com" target="_blank">
+            <a href="https://ak.pics" target="_blank">
+
             <img
               alt="work"
               class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
-              src="/work/3.png"
+              src="/work/13.webp"
             />
             <div
               class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white/20 ">
-              <span class="block font-semibold">absurditiesmedia.com</span>
+              <span class="block font-semibold">ak.pics - infinitescroll</span>
             </div>
           </a>
           </li>
+        
           <li
             class="flex justify-center flex-col splide__slide is-prev"
             id="splide01-slide04"
             role="tabpanel"
             aria-roledescription="slide"
-            aria-label="6 of 8"
+            aria-label="lifeasweknowit.com"
             style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
             aria-hidden="true">
             <a href="https://lifeasweknowit.com" target="_blank">
             <img
               alt="work"
               class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
-              src="/work/4.png"
+              src="/work/4.webp"
             />
             <div
               class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white/20 ">
@@ -208,14 +210,14 @@
             id="splide01-slide05"
             role="tabpanel"
             aria-roledescription="slide"
-            aria-label="7 of 8"
+            aria-label="infostrikes.com"
             style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
             aria-hidden="true">
             <a href="https://infostrikes.com" target="_blank">
             <img
               alt="work"
               class="w-full object-cover object-center bg-white border-t border-black"
-              src="/work/5.png"
+              src="/work/15.webp"
             />
             <div
               class="text-white text-xs order-first p-3 text-center lg:border-black">
@@ -229,14 +231,14 @@
             id="splide01-slide06"
             role="tabpanel"
             aria-roledescription="slide"
-            aria-label="8 of 8"
+            aria-label="hp.pics"
             style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
             aria-hidden="true">
             <a href="https://hp.pics" target="blank">
             <img
               alt="work"
               class="w-full object-cover object-center bg-white border-t border-black lg:border-r"
-              src="/work/6.png?2"
+              src="/work/6.webp?2"
             />
             <div
               class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white/20 ">
@@ -246,6 +248,8 @@
           </li>
         </ul>
       </div>
+
     </section>
   </div>
-</section>
+  <div class="p-1 bg-violet-950 border-b border-t border-l border-r border-white/20">&nbsp;</div>
+</section> 

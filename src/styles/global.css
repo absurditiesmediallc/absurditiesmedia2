@@ -34,15 +34,148 @@
   font-style: normal;
   descent-override: 0%;
 }
-.gradient-grid  {
 
-background-image: radial-gradient(circle at center center, transparent 0%,rgba(255,255,255, 0) 99%),repeating-linear-gradient(0deg, rgba(205,205,205, 0.2) 0px, rgba(205,205,205, 0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(205,205,205, 0.2) 0px, rgba(205,205,205, 0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgba(255,255,255, 0),rgba(255,255,255, 0));
+
+
+
+.gradient-grid-VERBOSE-SAFE-TO-DELETE-OR-SAVE-FOR-DOCUMENTATION-VALUE{
+  /* Radial gradient (first layer, on top) */
+  background-image: radial-gradient(circle at center center, transparent 0%, rgba(255, 255, 255, 0) 99%);
+  background-position: center center;
+  background-size: 100% 100%; /* Or specify size as needed */
+  background-repeat: no-repeat; /* Radial gradients typically don't repeat */
+
+  /* Repeating linear gradient 1 (second layer) */
+  background-image:
+    radial-gradient(circle at center center, transparent 0%, rgba(255, 255, 255, 0) 99%), /* Previous layer included for clarity */
+    repeating-linear-gradient(162deg, rgba(205, 205, 205, 0.2) 0px, rgba(205, 205, 205, 0.2) 1px, transparent 1px, transparent 6px);
+  background-position: center center, 0 0; /* Or specify positions as needed */
+  background-size: 100% 100%, 100% 100%; /* Or specify sizes as needed */
+  background-repeat: no-repeat, repeat; /* Repeat for this gradient */
+
+  /* Repeating linear gradient 2 (third layer) */
+  background-image:
+    radial-gradient(circle at center center, transparent 0%, rgba(255, 255, 255, 0) 99%), /* Layers included for clarity */
+    repeating-linear-gradient(162deg, rgba(205, 205, 205, 0.2) 0px, rgba(205, 205, 205, 0.2) 1px, transparent 1px, transparent 6px),
+    repeating-linear-gradient(90deg, rgba(205, 205, 205, 0.2) 0px, rgba(205, 205, 205, 0.2) 1px, transparent 1px, transparent 6px);
+  background-position: center center, 0 0, 0 0; /* Or specify positions as needed */
+  background-size: 100% 100%, 100% 100%, 100% 100%; /* Or specify sizes as needed */
+  background-repeat: no-repeat, repeat, repeat;
+
+  /* Linear gradient (last layer, at the back) */
+  background-image:
+    radial-gradient(circle at center center, transparent 0%, rgba(255, 255, 255, 0) 99%),
+    repeating-linear-gradient(162deg, rgba(205, 205, 205, 0.2) 0px, rgba(205, 205, 205, 0.2) 1px, transparent 1px, transparent 6px),
+    repeating-linear-gradient(90deg, rgba(205, 205, 205, 0.2) 0px, rgba(205, 205, 205, 0.2) 1px, transparent 1px, transparent 6px),
+    linear-gradient(260deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background-position: center center, 0 0, 0 0, 0 0; /* Or specify positions as needed */
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%; /* Or specify sizes as needed */
+  background-repeat: no-repeat, repeat, repeat, no-repeat;
 }
 
-/*.splide__pagination {
-  visibility: hidden;
-}*/
+.animated-gradient-grid {
+  overflow:hidden;
+  position: relative; /* Needed for positioning the pseudo-element */
+  /* Other background layers, not animated */
+  /*background-image: radial-gradient(circle at center center, transparent 0%, rgba(255, 255, 255, 0) 99%), repeating-linear-gradient(90deg, rgba(205, 205, 205, 0.2) 0px, rgba(205, 205, 205, 0.2) 1px, transparent 1px, transparent 15px);*/
+}
+/*
+.gradient-grid  {
+background-image: radial-gradient(circle at center center, transparent 0%,rgba(255,255,255, 0) 99%),repeating-linear-gradient(0deg, rgba(205,205,205, 0.2) 0px, rgba(205,205,205, 0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(205,205,205, 0.2) 0px, rgba(205,205,205, 0.2) 1px,transparent 1px, transparent 15px),linear-gradient(90deg, rgba(255,255,255, 0),rgba(255,255,255, 0));
+}
+*/
 
+.animated-background-layer {
+  content: '';
+  position: absolute;
+  top: -300%;
+  left: -50%;
+  width: 200%;
+  height: 1000%;
+  /* This is the gradient you want to animate */
+  background-image: repeating-linear-gradient(180deg, rgba(205, 205, 205, 0.2) 0px, rgba(205, 205, 205, 0.2) 1px, transparent 1px, transparent 10px);
+  z-index: -1; /* Ensures it stays behind the main content */
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+}
+
+.animated-background-layer-2{
+  background-image: repeating-linear-gradient(180deg, rgba(205, 205, 205, 0.2) 0px, rgba(205, 205, 205, 0.2) 1px, transparent 1px, transparent 10px);
+  content: '';
+  position: absolute;
+  top: -300%;
+  left: -50%;
+  width: 200%;
+  height: 1000%;
+  z-index: -2;
+}
+.animated-background-layer-3{
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  animation: colorPulse 2s infinite;
+}
+
+.after-animated-gradient-grid {
+  display:none;
+}
+
+@keyframes rotate-back-and-forth {
+  0% { transform: rotate(0deg);  }
+  50% { transform: rotate(45deg); } /* Rotates 45 degrees forward */
+  100% { transform: rotate(0deg); } /* Returns to the original position */
+}
+@keyframes rotate-back-and-forth-rev { 
+  0% { transform: rotate(90deg); }
+  50% { transform: rotate(135deg); } /* Rotates 45 degrees forward */
+  100% { transform: rotate(90deg); } /* Returns to the original position */
+}
+
+@keyframes colorPulse {
+  0%   { background-color: #220000aa; }
+  50%  { background-color: #000022aa; }
+  100% { background-color: #220000aa; }
+}
+
+
+
+@keyframes zoom-in-and-out {
+  0% { transform: scale(1); }
+  50% { transform: scale(2); }
+  100% { transform: scale(4); }
+}
+
+.animated-background-layer {
+  /* animation: rotate-back-and-forth 20s infinite alternate; // animates over 20s seconds (overriding in style tag), repeats indefinitely, and alternates direction */
+  animation-direction:alternate;
+  animation-duration:20s;
+  animation-fill-mode:none;
+  animation-iteration-count:infinite;
+  animation-name: rotate-back-and-forth;
+}
+.animated-background-layer-2 {
+  /* animation: rotate-back-and-forth 20s infinite alternate; // animates over 20s seconds (overriding in style tag), repeats indefinitely, and alternates direction */
+  animation-direction:alternate;
+  animation-duration:20s;
+  animation-fill-mode:none;
+  animation-iteration-count:infinite;
+  animation-name: rotate-back-and-forth-rev;
+}
+.before-animated-gradient-grid {display:none;}
+
+.splide__pagination {
+ bottom:-1.5em;
+}
+.splide__arrow {
+    opacity: 1;
+}
+.splide__arrow:disabled {
+    opacity: .1;
+}
 button,
 [type='button'],
 [type='reset'],

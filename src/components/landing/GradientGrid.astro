@@ -1,13 +1,13 @@
 ---
 const {bgcolor='gradient-grid'} = Astro.props
-var sectionClasses="mx-auto border-white/20  border-x max-w-7xl "+bgcolor
+var sectionClasses="mx-auto border-white/20 border-x lg:max-w-7xl "+bgcolor
 ---
 <section class="border-white/20 border-b">
-<div class={sectionClasses}>
-<div class="mx-auto max-w-7xl p-8">
-<p class="text-white">
-<slot/>
-</p>
-</div>
-</div>
+<div class="gradient-grid"><div class={sectionClasses}> 
+  <div class="mx-auto lg:max-w-7xl p-8">
+    <p class="text-white">
+      <slot/>
+    </p>
+  </div>
+</div></div>
 </section>

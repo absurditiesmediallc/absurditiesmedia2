@@ -5,20 +5,23 @@ import Work from "@/components/landing/Work.astro";
 import Intro from "@/components/landing/Intro.astro";
 import Services from "@/components/landing/Services.astro";
 import Cta from "@/components/landing/Cta.astro";
-import RecordingArtists from '@/components/landing/RecordingArtists.astro'
-import SolidGrid from '@/components/landing/SolidGrid.astro'
+import RecordingArtists from '@/components/landing/RecordingArtists.astro';
+import SolidGrid from '@/components/landing/SolidGrid.astro';
+import AnimatedGradientGrid from '@/components/landing/AnimatedGradientGrid.astro';
 ---
 
 
 
 <BaseLayout>
-
+  <AnimatedGradientGrid>
   <Hero heroText="Building the the content you deserve to see with no regard for what you want. You will love it." />  
-  
+  </AnimatedGradientGrid>
   <SolidGrid bgcolor="bg-emerald-900"><RecordingArtists/></SolidGrid>
-<SolidGrid bgcolor="bg-slate-900 text-sky-500"><center>💓💓💓 🧿 we're 🔥 watching 🔥 you 🪬 and 🔮 we 🧿 can 💓 see 🪬 you're 🔥 on 🔥 drugs 💉 💓💓💓</center></SolidGrid>
+  <SolidGrid bgcolor="bg-slate-900 text-sky-500"><center>💓💓💓 🧿 we're 🔥 watching 🔥 you 🪬 and 🔮 we 🧿 can 💓 see 🪬 you're 🔥 on 🔥 drugs 💉 💓💓💓</center></SolidGrid>
   <Work /> 
+  <AnimatedGradientGrid speed="animation-duration:3s;">
   <Intro />
+  </AnimatedGradientGrid>
   <Services />
   <Cta />
 </BaseLayout>

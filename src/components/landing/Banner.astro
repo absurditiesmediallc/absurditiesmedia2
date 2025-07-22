@@ -1,20 +1,20 @@
 ---
 const { bannerText = "Drugs ✺ You love it ✺ Sex ✺ You need it ✺ Shoplifting ✺ You can't live without it ✺ Heroin ✺ Sick without it ✺ Absurdities Media ✺ Submit" } = Astro.props;
 ---
- <section class="border-white/20  border-y">
-        <div class="text-white mx-auto">
-          <div class="mx-auto overflow-hidden overflow-x-hidden py-2 relative">
-            <div class="w-full justify-between grid">
-              <div
-                class="absolute from-black inset-0 left-0 via-transparent w-44 z-10 bg-gradient-to-r">
-              </div>
-              <div
-                class="absolute from-black inset-0 left-0 via-transparent w-44 z-10 bg-gradient-to-l ml-auto">
-              </div>
-            </div>
-            <div class="flex items-center animate-marquee font-black font-display gap-4 relative tracking-widest uppercase whitespace-nowrap">
-            {bannerText}
-            </div>
-          </div>
+ <section class="border-white/20 bg-rose-950 border-y">
+  <div class="text-white mx-auto">
+    <div class="mx-auto overflow-hidden overflow-x-hidden py-2 relative">
+      <div class="w-full justify-between grid">
+        <div
+          class="absolute from-black inset-0 left-0 via-transparent w-44 z-10 bg-gradient-to-r">
         </div>
-      </section>
+        <div
+          class="absolute from-black inset-0 left-0 via-transparent w-44 z-10 bg-gradient-to-l ml-auto">
+        </div>
+      </div>
+      <div class="flex items-center animate-marquee font-black font-display gap-4 relative tracking-widest uppercase whitespace-nowrap">
+      {bannerText}
+      </div>
+    </div>
+  </div>
+</section>

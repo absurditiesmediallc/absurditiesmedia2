@@ -6,12 +6,14 @@ const {heroText, heroImage, heroImageAlt} = Astro.props;
 ---
 
 <section class="border-white/20  border-b">
-  <div class="mx-auto border-white/20  border-x max-w-7xl">
+  <div class="mx-auto border-white/20 border-x lg:max-w-7xl">
     <div class="mx-auto">
       <div style="clear:both;"></div>
-      <div class="mx-auto lg:pt-28 gradient-grid px-8 py-12">       
+      <div class="mx-auto lg:pt-28 p-4 lg:px-8 lg:py-12">    
+    
         <h1 class="text-white font-display uppercase text-3xl lg:text-7xl pb-8">{heroText}</h1>
         {(heroImage)?<Image src={heroImage} alt={heroImageAlt}/>:""} 
+      
       </div>
       <Banner bannerText="Your Family ✺ Will Betray You ✺ Your Investments ✺ Will Not Protect You ✺ Your Sense of Security ✺ Is an Illusion"  />
       <!--<Testimonials />-->

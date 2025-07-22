@@ -1,0 +1,14 @@
+---
+const {speed="animation-duration:20s;"} = Astro.props;
+---
+<section class="animated-gradient-grid-section">
+  <div class="before-animated-gradient-grid">&nbsp;</div>
+  <div class="animated-gradient-grid" >
+    <div class="animated-background-layer" style={speed}>&nbsp;</div> 
+    <div class="animated-background-layer-2" style={speed}>&nbsp;</div>
+    <div class="animated-background-layer-3" style={speed}>&nbsp;</div>
+
+    <slot/>
+  </div>
+  <div class="after-animated-gradient-grid">&nbsp;</div>
+</section>
